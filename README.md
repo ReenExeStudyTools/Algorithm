@@ -1,1 +1,1 @@
-# RedStudy
+# Algorithm
