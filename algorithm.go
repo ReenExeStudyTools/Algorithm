@@ -19,5 +19,5 @@ func findIndexesForSum(list []int, target int) []int {
 
 // https://leetcode.com/problems/add-two-numbers/
 func addTwoListNode(l1 *ListNode, l2 *ListNode) *ListNode {
-	return &ListNode{Val: 1, Next: nil}
+	return &ListNode{1, nil}
 }
