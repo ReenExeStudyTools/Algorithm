@@ -21,8 +21,8 @@ func TestPlayer(t *testing.T) {
 	}
 
 	listNodeNested := addTwoListNode(
-		&ListNode{2, &ListNode{8, &ListNode{3, nil}}},
-		&ListNode{3, &ListNode{9, &ListNode{4, nil}}},
+		&ListNode{2, &ListNode{8, &ListNode{9, nil}}},
+		&ListNode{3, &ListNode{9, &ListNode{9, nil}}},
 	)
 
 	if listNodeNested.Val != 5 {
@@ -33,7 +33,11 @@ func TestPlayer(t *testing.T) {
 		t.Fatal("fail")
 	}
 
-	if listNodeNested.Next.Next.Val != 8 {
+	if listNodeNested.Next.Next.Val != 9 {
+		t.Fatal("fail")
+	}
+
+	if listNodeNested.Next.Next.Next.Val != 1 {
 		t.Fatal("fail")
 	}
 }
