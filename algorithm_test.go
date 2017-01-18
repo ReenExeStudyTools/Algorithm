@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestPlayer(t *testing.T) {
+func TestFindIndexesForSum(t *testing.T) {
 	if !reflect.DeepEqual(findIndexesForSum([]int{1, 2}, 3), []int{0, 1}) {
 		t.Fatal("fail")
 	}
@@ -13,7 +13,9 @@ func TestPlayer(t *testing.T) {
 	if !reflect.DeepEqual(findIndexesForSum([]int{3, 2, 4}, 6), []int{1, 2}) {
 		t.Fatal("fail")
 	}
+}
 
+func TestAddTwoListNode(t *testing.T) {
 	listNode := addTwoListNode(&ListNode{3, nil}, &ListNode{2, nil})
 
 	if listNode.Val != 5 {
