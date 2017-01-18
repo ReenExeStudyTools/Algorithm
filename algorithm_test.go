@@ -19,4 +19,10 @@ func TestPlayer(t *testing.T) {
 	if (listNode.Val != 15) {
 		t.Fatal("fail")
 	}
+
+	listNodeNested := addTwoListNode(&ListNode{7, &ListNode{3, nil}}, &ListNode{8, &ListNode{2, nil}})
+
+	if (listNodeNested.Val != 15) {
+		t.Fatal("fail")
+	}
 }
