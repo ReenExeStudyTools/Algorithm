@@ -33,7 +33,7 @@ func addTwoListNode(l *ListNode, r *ListNode) *ListNode {
 
 	next := result
 
-	for ((l != nil && l.Next != nil) || (r != nil && r.Next != nil)) {
+	for (l != nil && l.Next != nil) || (r != nil && r.Next != nil) {
 		if l != nil {
 			l = l.Next
 		}
