@@ -16,3 +16,13 @@ func findIndexesForSum(list []int, target int) []int {
 
 	return []int{}
 }
+
+type ListNode struct {
+    Val int
+    Next *ListNode
+}
+
+// https://leetcode.com/problems/add-two-numbers/
+func addTwoListNode(l1 *ListNode, l2 *ListNode) *ListNode {
+	return &ListNode{Val: 1, Next: nil}
+}
