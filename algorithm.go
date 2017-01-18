@@ -8,18 +8,13 @@ func findIndexesForSum(list []int, target int) []int {
 				continue
 			}
 
-			if value + innerValue == target {
-				return []int{index, innerIndex};
+			if value+innerValue == target {
+				return []int{index, innerIndex}
 			}
 		}
 	}
 
 	return []int{}
-}
-
-type ListNode struct {
-    Val int
-    Next *ListNode
 }
 
 // https://leetcode.com/problems/add-two-numbers/
