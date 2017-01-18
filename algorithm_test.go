@@ -20,6 +20,16 @@ func TestPlayer(t *testing.T) {
 		t.Fatal("fail")
 	}
 
+	listNodeAppend := addTwoListNode(&ListNode{5, nil}, &ListNode{5, nil})
+
+	if (listNodeAppend.Val != 0) {
+		t.Fatal("fail")
+	}
+
+	if (listNodeAppend.Next.Val != 1) {
+		t.Fatal("fail")
+	}
+
 	listNodeNested := addTwoListNode(
 		&ListNode{2, &ListNode{8, &ListNode{9, nil}}},
 		&ListNode{3, &ListNode{9, &ListNode{9, nil}}},
