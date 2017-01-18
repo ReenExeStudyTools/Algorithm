@@ -21,5 +21,11 @@ func findIndexesForSum(list []int, target int) []int {
 func addTwoListNode(l *ListNode, r *ListNode) *ListNode {
 	result := ListNode{l.Val + r.Val, nil}
 
+	for l.Next != nil && r.Next != nil {
+		l = l.Next
+		r = r.Next
+		result.Next = &ListNode{l.Val + r.Val, nil}
+	}
+
 	return &result
 }
