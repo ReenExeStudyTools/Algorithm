@@ -34,8 +34,13 @@ func addTwoListNode(l *ListNode, r *ListNode) *ListNode {
 	next := result
 
 	for ((l != nil && l.Next != nil) || (r != nil && r.Next != nil)) {
-		l = l.Next
-		r = r.Next
+		if l != nil {
+			l = l.Next
+		}
+
+		if r != nil {
+			r = r.Next
+		}
 
 		sum := accumulator
 

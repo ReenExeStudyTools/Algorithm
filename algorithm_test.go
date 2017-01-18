@@ -31,7 +31,7 @@ func TestPlayer(t *testing.T) {
 	}
 
 	listNodeDifferentLength := addTwoListNode(
-		&ListNode{3, &ListNode{7, nil}},
+		&ListNode{3, &ListNode{7, &ListNode{5, nil}}},
 		&ListNode{5, nil},
 	)
 
@@ -40,6 +40,10 @@ func TestPlayer(t *testing.T) {
 	}
 
 	if listNodeDifferentLength.Next.Val != 7 {
+		t.Fatal("fail")
+	}
+
+	if listNodeDifferentLength.Next.Next.Val != 5 {
 		t.Fatal("fail")
 	}
 
