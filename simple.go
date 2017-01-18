@@ -1,5 +1,5 @@
 package algorithm
 
-func twoSum(list []int, target int) []int {
+func findIndexesForSum(list []int, target int) []int {
 	return []int{target}
 }
