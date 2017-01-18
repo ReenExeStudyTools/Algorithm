@@ -6,9 +6,7 @@ import (
 )
 
 func TestPlayer(t *testing.T) {
-	expect := []int{1}
-	actual := findIndexesForSum([]int{1}, 1)
-	if !reflect.DeepEqual(actual, expect) {
+	if !reflect.DeepEqual(findIndexesForSum([]int{1, 2}, 3), []int{0, 1}) {
 		t.Fatal("fail")
 	}
 }
