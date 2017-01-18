@@ -1,5 +1,5 @@
 package algorithm
 
-func one() uint {
-	return 1
+func twoSum(list []int, target int) []int {
+	return []int{target}
 }
