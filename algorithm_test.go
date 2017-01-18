@@ -14,7 +14,7 @@ func TestPlayer(t *testing.T) {
 		t.Fatal("fail")
 	}
 
-	var listNode ListNode = addTwoListNode(&ListNode{7, nil}, &ListNode{8, nil})
+	listNode := addTwoListNode(&ListNode{7, nil}, &ListNode{8, nil})
 
 	if (listNode.Val != 15) {
 		t.Fatal("fail")
