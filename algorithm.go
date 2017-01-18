@@ -38,5 +38,9 @@ func addTwoListNode(l *ListNode, r *ListNode) *ListNode {
 		next = next.Next
 	}
 
+	if accumulator != 0 {
+		next.Next = &ListNode{accumulator, nil}
+	}
+
 	return result
 }
