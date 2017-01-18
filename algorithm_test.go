@@ -21,11 +21,11 @@ func TestPlayer(t *testing.T) {
 	}
 
 	listNodeNested := addTwoListNode(
-		&ListNode{7, &ListNode{3, nil}},
-		&ListNode{8, &ListNode{2, nil}},
+		&ListNode{7, &ListNode{3, &ListNode{9, nil}}},
+		&ListNode{8, &ListNode{2, &ListNode{8, nil}}},
 	)
 
-	if (listNodeNested.Val != 15 || listNodeNested.Next.Val != 5) {
+	if (listNodeNested.Val != 15 || listNodeNested.Next.Val != 5 || listNodeNested.Next.Next.Val != 17) {
 		t.Fatal("fail")
 	}
 }
