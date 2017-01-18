@@ -30,6 +30,19 @@ func TestPlayer(t *testing.T) {
 		t.Fatal("fail")
 	}
 
+	listNodeDifferentLength := addTwoListNode(
+		&ListNode{3, &ListNode{7, nil}},
+		&ListNode{5, nil},
+	)
+
+	if listNodeDifferentLength.Val != 8 {
+		t.Fatal("fail")
+	}
+
+	if listNodeDifferentLength.Next.Val != 7 {
+		t.Fatal("fail")
+	}
+
 	listNodeNested := addTwoListNode(
 		&ListNode{2, &ListNode{8, &ListNode{9, nil}}},
 		&ListNode{3, &ListNode{9, &ListNode{9, nil}}},
