@@ -19,13 +19,16 @@ func findIndexesForSum(list []int, target int) []int {
 
 // https://leetcode.com/problems/add-two-numbers/
 func addTwoListNode(l *ListNode, r *ListNode) *ListNode {
-	result := ListNode{l.Val + r.Val, nil}
+	result := &ListNode{l.Val + r.Val, nil}
+
+	next := result;
 
 	for l.Next != nil && r.Next != nil {
 		l = l.Next
 		r = r.Next
-		result.Next = &ListNode{l.Val + r.Val, nil}
+		next.Next = &ListNode{l.Val + r.Val, nil}
+		next = next.Next
 	}
 
-	return &result
+	return result
 }
