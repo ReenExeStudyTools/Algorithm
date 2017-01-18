@@ -25,7 +25,15 @@ func TestPlayer(t *testing.T) {
 		&ListNode{3, &ListNode{9, &ListNode{4, nil}}},
 	)
 
-	if (listNodeNested.Val != 5 || listNodeNested.Next.Val != 7 || listNodeNested.Next.Next.Val != 8) {
+	if listNodeNested.Val != 5 {
+		t.Fatal("fail")
+	}
+
+	if listNodeNested.Next.Val != 7 {
+		t.Fatal("fail")
+	}
+
+	if listNodeNested.Next.Next.Val != 8 {
 		t.Fatal("fail")
 	}
 }

@@ -23,10 +23,18 @@ func addTwoListNode(l *ListNode, r *ListNode) *ListNode {
 
 	next := result;
 
+	accumulator := 0;
+
 	for l.Next != nil && r.Next != nil {
 		l = l.Next
 		r = r.Next
-		next.Next = &ListNode{l.Val + r.Val, nil}
+		sum := accumulator + l.Val + r.Val
+		accumulator = 0
+		if (sum > 9) {
+			accumulator = 1;
+			sum -= 10
+		}
+		next.Next = &ListNode{sum, nil}
 		next = next.Next
 	}
 
