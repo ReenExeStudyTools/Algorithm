@@ -14,18 +14,18 @@ func TestPlayer(t *testing.T) {
 		t.Fatal("fail")
 	}
 
-	listNode := addTwoListNode(&ListNode{7, nil}, &ListNode{8, nil})
+	listNode := addTwoListNode(&ListNode{3, nil}, &ListNode{2, nil})
 
-	if (listNode.Val != 15) {
+	if (listNode.Val != 5) {
 		t.Fatal("fail")
 	}
 
 	listNodeNested := addTwoListNode(
-		&ListNode{7, &ListNode{3, &ListNode{9, nil}}},
-		&ListNode{8, &ListNode{2, &ListNode{8, nil}}},
+		&ListNode{2, &ListNode{8, &ListNode{3, nil}}},
+		&ListNode{3, &ListNode{9, &ListNode{4, nil}}},
 	)
 
-	if (listNodeNested.Val != 15 || listNodeNested.Next.Val != 5 || listNodeNested.Next.Next.Val != 17) {
+	if (listNodeNested.Val != 5 || listNodeNested.Next.Val != 7 || listNodeNested.Next.Next.Val != 8) {
 		t.Fatal("fail")
 	}
 }
