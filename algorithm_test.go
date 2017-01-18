@@ -16,17 +16,17 @@ func TestPlayer(t *testing.T) {
 
 	listNode := addTwoListNode(&ListNode{3, nil}, &ListNode{2, nil})
 
-	if (listNode.Val != 5) {
+	if listNode.Val != 5 {
 		t.Fatal("fail")
 	}
 
 	listNodeAppend := addTwoListNode(&ListNode{5, nil}, &ListNode{5, nil})
 
-	if (listNodeAppend.Val != 0) {
+	if listNodeAppend.Val != 0 {
 		t.Fatal("fail")
 	}
 
-	if (listNodeAppend.Next.Val != 1) {
+	if listNodeAppend.Next.Val != 1 {
 		t.Fatal("fail")
 	}
 

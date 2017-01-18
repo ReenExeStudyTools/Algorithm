@@ -20,26 +20,36 @@ func findIndexesForSum(list []int, target int) []int {
 // TODO: refactoring
 // https://leetcode.com/problems/add-two-numbers/
 func addTwoListNode(l *ListNode, r *ListNode) *ListNode {
-	accumulator := 0;
+	accumulator := 0
 
 	sum := accumulator + l.Val + r.Val
 
-	if (sum > 9) {
-		accumulator = 1;
+	if sum > 9 {
+		accumulator = 1
 		sum -= 10
 	}
 
 	result := &ListNode{sum, nil}
 
-	next := result;
+	next := result
 
-	for l.Next != nil && r.Next != nil {
+	for ((l != nil && l.Next != nil) || (r != nil && r.Next != nil)) {
 		l = l.Next
 		r = r.Next
-		sum := accumulator + l.Val + r.Val
+
+		sum := accumulator
+
+		if l != nil {
+			sum += l.Val
+		}
+
+		if r != nil {
+			sum += r.Val
+		}
+
 		accumulator = 0
-		if (sum > 9) {
-			accumulator = 1;
+		if sum > 9 {
+			accumulator = 1
 			sum -= 10
 		}
 		next.Next = &ListNode{sum, nil}
