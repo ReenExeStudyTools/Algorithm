@@ -1,5 +1,6 @@
 package algorithm
 
+// https://leetcode.com/problems/two-sum/
 func findIndexesForSum(list []int, target int) []int {
 	for index, value := range list {
 		for innerIndex, innerValue := range list {
