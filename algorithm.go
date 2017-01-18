@@ -67,3 +67,8 @@ func addTwoListNode(l *ListNode, r *ListNode) *ListNode {
 
 	return result
 }
+
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/
+func lengthOfLongestSubstring(s string) int {
+	return 1
+}
