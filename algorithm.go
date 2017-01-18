@@ -17,13 +17,21 @@ func findIndexesForSum(list []int, target int) []int {
 	return []int{}
 }
 
+// TODO: refactoring
 // https://leetcode.com/problems/add-two-numbers/
 func addTwoListNode(l *ListNode, r *ListNode) *ListNode {
-	result := &ListNode{l.Val + r.Val, nil}
+	accumulator := 0;
+
+	sum := accumulator + l.Val + r.Val
+
+	if (sum > 9) {
+		accumulator = 1;
+		sum -= 10
+	}
+
+	result := &ListNode{sum, nil}
 
 	next := result;
-
-	accumulator := 0;
 
 	for l.Next != nil && r.Next != nil {
 		l = l.Next
