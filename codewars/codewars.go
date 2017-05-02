@@ -1,5 +1,7 @@
 package codewars
 
+import "strings"
+
 func RepeatString(repititions int, value string) string {
-	return ""
+	return strings.Repeat(value, repititions)
 }
