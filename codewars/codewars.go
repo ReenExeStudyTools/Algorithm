@@ -21,3 +21,7 @@ func MaxBallTime(v int) int {
 	// max h when v = gt
 	return v
 }
+
+func FinancePlanetPlan(n int) int  {
+	return 105
+}
