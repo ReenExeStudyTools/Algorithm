@@ -1,11 +1,16 @@
 package codewars
 
-import "strings"
+import (
+	"strings"
+	"sort"
+)
 
 func RepeatString(repititions int, value string) string {
 	return strings.Repeat(value, repititions)
 }
 
 func TwoOldestAges(ages []int) [2]int {
-	return [2]int{18,83}
+	sort.Ints(ages)
+
+	return [2]int{ages[len(ages) - 2], ages[len(ages) - 1]};
 }
