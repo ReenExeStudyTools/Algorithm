@@ -21,3 +21,9 @@ func TestFindIndexesForSum(t *testing.T) {
 		t.Fatal("fail")
 	}
 }
+
+func TestTwoOldestAges(t *testing.T)  {
+	if !reflect.DeepEqual(TwoOldestAges([]int{6,5,83,5,3,18}), [2]int{18,83}) {
+		t.Fatal("fail")
+	}
+}
