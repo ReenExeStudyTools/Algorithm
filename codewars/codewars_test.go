@@ -49,7 +49,7 @@ func TestMaxBallTime(t *testing.T)  {
 }
 
 func TestFinancePlanetPlan(t *testing.T)  {
-	if FinancePlanetPlan(5) != 105 {
+	if FinancePlanetPlan(6) != 168 {
 		t.Fatal("fail")
 	}
 }
