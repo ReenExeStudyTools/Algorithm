@@ -14,3 +14,7 @@ func TwoOldestAges(ages []int) [2]int {
 
 	return [2]int{ages[len(ages) - 2], ages[len(ages) - 1]};
 }
+
+func MaxBallTime(startSpeed int) int {
+	return startSpeed
+}

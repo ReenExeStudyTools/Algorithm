@@ -31,3 +31,9 @@ func TestTwoOldestAges(t *testing.T)  {
 		t.Fatal("fail")
 	}
 }
+
+func TestMaxBallTime(t *testing.T)  {
+	if MaxBallTime(1) != 1 {
+		t.Fatal("fail")
+	}
+}
