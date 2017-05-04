@@ -23,5 +23,20 @@ func MaxBallTime(v int) int {
 }
 
 func FinancePlanetPlan(n int) int  {
-	return 105
+	sum := 0
+	from := 0
+	to := 6
+	distance := 7
+	for week := 0; week <= n; week++ {
+		if week < 6 {
+			sum += (from + to) * distance / 2
+			distance--
+			from += 2
+			to++
+		} else {
+			sum += to
+			to++
+		}
+	}
+	return sum
 }
