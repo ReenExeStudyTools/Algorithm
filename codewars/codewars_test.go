@@ -53,3 +53,9 @@ func TestFinancePlanetPlan(t *testing.T)  {
 		t.Fatal("fail")
 	}
 }
+
+func TestMultiple3And5(t *testing.T) {
+	if Multiple3And5(10) != 23 {
+		t.Fatal("fail")
+	}
+}
