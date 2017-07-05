@@ -79,6 +79,22 @@ func EquableTriangle(a, b, c int) bool {
 }
 
 func FindUniq(arr []float32) float32 {
-	// Do the magic
-	return 2.0
+	uniqueMap := map[float32]int{}
+
+	var result float32 = 0
+
+	for _, val := range arr {
+		if uniqueMap[val] == 0 {
+			result = val
+			uniqueMap[val] = 1
+		} else {
+			uniqueMap[val] += 1
+		}
+	}
+
+	if uniqueMap[result] == 1 {
+		return result
+	}
+
+	return float32(0)
 }
