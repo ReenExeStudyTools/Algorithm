@@ -22,18 +22,18 @@ func TestFindIndexesForSum(t *testing.T) {
 	}
 }
 
-func TestTwoOldestAges(t *testing.T)  {
-	if !reflect.DeepEqual(TwoOldestAges([]int{6,5,83,5,3,18}), [2]int{18,83}) {
+func TestTwoOldestAges(t *testing.T) {
+	if !reflect.DeepEqual(TwoOldestAges([]int{6, 5, 83, 5, 3, 18}), [2]int{18, 83}) {
 		t.Fatal("fail")
 	}
 
-	if !reflect.DeepEqual(TwoOldestAges([]int{1,5,87,45,8,8}), [2]int{45,87}) {
+	if !reflect.DeepEqual(TwoOldestAges([]int{1, 5, 87, 45, 8, 8}), [2]int{45, 87}) {
 		t.Fatal("fail")
 	}
 }
 
-func TestMaxBallTime(t *testing.T)  {
-/**
+func TestMaxBallTime(t *testing.T) {
+	/**
 	if MaxBallTime(37) != 10 {
 		t.Fatal("fail")
 	}
@@ -45,10 +45,10 @@ func TestMaxBallTime(t *testing.T)  {
 	if MaxBallTime(136) != 39 {
 		t.Fatal("fail")
 	}
- */
+	*/
 }
 
-func TestFinancePlanetPlan(t *testing.T)  {
+func TestFinancePlanetPlan(t *testing.T) {
 	if FinancePlanetPlan(6) != 168 {
 		t.Fatal("fail")
 	}

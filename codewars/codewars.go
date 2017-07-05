@@ -1,8 +1,8 @@
 package codewars
 
 import (
-	"strings"
 	"sort"
+	"strings"
 )
 
 func RepeatString(repititions int, value string) string {
@@ -12,7 +12,7 @@ func RepeatString(repititions int, value string) string {
 func TwoOldestAges(ages []int) [2]int {
 	sort.Ints(ages)
 
-	return [2]int{ages[len(ages) - 2], ages[len(ages) - 1]};
+	return [2]int{ages[len(ages)-2], ages[len(ages)-1]}
 }
 
 func MaxBallTime(v int) int {
@@ -22,7 +22,7 @@ func MaxBallTime(v int) int {
 	return v
 }
 
-func FinancePlanetPlan(n int) int  {
+func FinancePlanetPlan(n int) int {
 	sum := 0
 	from := 0
 	to := 6
@@ -45,7 +45,7 @@ func Multiple3And5(number int) int {
 	sum := 0
 
 	for i := 1; i < number; i++ {
-		if i % 3 == 0 || i % 5 == 0 {
+		if i%3 == 0 || i%5 == 0 {
 			sum += i
 		}
 	}
