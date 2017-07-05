@@ -69,3 +69,9 @@ func TestIsTriangle(t *testing.T) {
 		t.Fatal("fail")
 	}
 }
+
+func TestHasUniqueChar(t *testing.T) {
+	if HasUniqueChar("  nAa") != false {
+		t.Fatal("fail")
+	}
+}
