@@ -58,5 +58,15 @@ func IsTriangle(a, b, c int) bool {
 }
 
 func HasUniqueChar(str string) bool {
-	return false
+	charExistsMap := make(map[rune]bool)
+
+	for _, chr := range str {
+		if charExistsMap[chr] {
+			return false
+		}
+
+		charExistsMap[chr] = true
+	}
+
+	return true
 }
