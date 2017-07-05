@@ -89,3 +89,9 @@ func TestEquableTriangle(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestFindUniq(t *testing.T) {
+	if FindUniq([]float32{1.0, 1.0, 1.0, 2.0, 1.0, 1.0}) != 2.0 {
+		t.Fail()
+	}
+}

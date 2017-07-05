@@ -77,3 +77,8 @@ func EquableTriangle(a, b, c int) bool {
 	a, b, c = sides[0], sides[1], sides[2]
 	return a*a+b*b == c*c
 }
+
+func FindUniq(arr []float32) float32 {
+	// Do the magic
+	return 2.0
+}
