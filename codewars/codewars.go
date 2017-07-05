@@ -72,5 +72,8 @@ func HasUniqueChar(str string) bool {
 }
 
 func EquableTriangle(a, b, c int) bool {
-	return false
+	sides := []int{a, b, c}
+	sort.Ints(sides)
+	a, b, c = sides[0], sides[1], sides[2]
+	return a*a+b*b == c*c
 }

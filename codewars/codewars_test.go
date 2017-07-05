@@ -81,6 +81,10 @@ func TestHasUniqueChar(t *testing.T) {
 }
 
 func TestEquableTriangle(t *testing.T) {
+	if EquableTriangle(5, 12, 13) != true {
+		t.Fail()
+	}
+
 	if EquableTriangle(2, 3, 4) != false {
 		t.Fail()
 	}
