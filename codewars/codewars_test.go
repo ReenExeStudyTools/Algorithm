@@ -99,3 +99,13 @@ func TestFindUniq(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestCrossover(t *testing.T) {
+	xs, ys := Crossover([]int{}, []int{1, 1, 1, 1, 1}, []int{2, 2, 2, 2, 2})
+	if !reflect.DeepEqual(xs, []int{1, 1, 1, 1, 1}) {
+		t.Fail()
+	}
+	if !reflect.DeepEqual(ys, []int{2, 2, 2, 2, 2}) {
+		t.Fail()
+	}
+}

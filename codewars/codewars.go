@@ -93,3 +93,7 @@ func FindUniq(arr []float32) float32 {
 
 	return float32(0)
 }
+
+func Crossover(ns []int, xs []int, ys []int) ([]int, []int) {
+	return xs, ys
+}
