@@ -52,3 +52,7 @@ func Multiple3And5(number int) int {
 
 	return sum
 }
+
+func IsTriangle(a, b, c int) bool {
+	return false
+}

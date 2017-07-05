@@ -59,3 +59,9 @@ func TestMultiple3And5(t *testing.T) {
 		t.Fatal("fail")
 	}
 }
+
+func TestIsTriangle(t *testing.T) {
+	if IsTriangle(5, 1, 2) != false {
+		t.Fatal("fail")
+	}
+}
