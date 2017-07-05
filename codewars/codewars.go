@@ -54,5 +54,5 @@ func Multiple3And5(number int) int {
 }
 
 func IsTriangle(a, b, c int) bool {
-	return false
+	return (a+b > c) && (a+c > b) && (b+c > a)
 }
