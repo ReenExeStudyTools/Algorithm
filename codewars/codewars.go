@@ -97,3 +97,7 @@ func FindUniq(arr []float32) float32 {
 func Crossover(ns []int, xs []int, ys []int) ([]int, []int) {
 	return xs, ys
 }
+
+func Gap(g, m, n int) []int {
+	return []int{g, m}
+}
