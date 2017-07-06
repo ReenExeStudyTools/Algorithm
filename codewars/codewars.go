@@ -99,5 +99,20 @@ func Crossover(ns []int, xs []int, ys []int) ([]int, []int) {
 }
 
 func Gap(g, m, n int) []int {
-	return []int{g, m}
+	primes := make([]int, n+1)
+	for i := 2; i <= n; i++ {
+		if primes[i] == 0 {
+			for j := i * i; j <= n; j += i {
+				primes[j] = 1
+			}
+		}
+	}
+
+	for i := m; i <= n-g; i++ {
+		if primes[i] == 0 && primes[i+g] == 0 {
+			return []int{i, i + g}
+		}
+	}
+
+	return nil
 }

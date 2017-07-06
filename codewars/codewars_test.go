@@ -114,4 +114,8 @@ func TestGap(t *testing.T) {
 	if !reflect.DeepEqual(Gap(2, 100, 110), []int{101, 103}) {
 		t.Fail()
 	}
+
+	if !reflect.DeepEqual(Gap(4, 100, 110), []int{103, 107}) {
+		t.Fail()
+	}
 }
