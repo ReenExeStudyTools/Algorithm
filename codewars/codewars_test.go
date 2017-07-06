@@ -111,7 +111,7 @@ func TestCrossover(t *testing.T) {
 }
 
 func TestGap(t *testing.T) {
-	if !reflect.DeepEqual(Gap(1, 2, 3), []int{1, 2}) {
+	if !reflect.DeepEqual(Gap(2, 100, 110), []int{101, 103}) {
 		t.Fail()
 	}
 }
