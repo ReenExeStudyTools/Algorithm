@@ -1,6 +1,7 @@
 package codewars
 
 import (
+	"math"
 	"sort"
 	"strings"
 )
@@ -115,4 +116,17 @@ func Gap(g, m, n int) []int {
 	}
 
 	return nil
+}
+
+func SquareOrSquareRoot(arr []int) []int {
+	result := make([]int, len(arr))
+	for key, value := range arr {
+		sqrt := int(math.Sqrt(float64(value)))
+		if sqrt*sqrt == value {
+			result[key] = sqrt
+		} else {
+			result[key] = value * value
+		}
+	}
+	return result
 }
