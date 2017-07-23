@@ -133,3 +133,13 @@ func TestSquareOrSquareRoot(t *testing.T) {
 		}
 	}
 }
+
+func TestPotatoes(t *testing.T) {
+	if Potatoes(99, 100, 98) != 50 {
+		t.Fail()
+	}
+
+	if Potatoes(82, 127, 80) != 114 {
+		t.Fail()
+	}
+}
