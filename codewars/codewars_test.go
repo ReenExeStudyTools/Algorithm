@@ -143,3 +143,9 @@ func TestPotatoes(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestFizzBuzzCuckooClock(t *testing.T) {
+	if FizzBuzzCuckooClock("13:34") != "tick" {
+		t.Fail()
+	}
+}
