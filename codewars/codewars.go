@@ -174,23 +174,9 @@ func FizzBuzzCuckooClock(time string) string {
 }
 
 func BlackOrWhiteKey(keyPressCount int) string {
-	if keyPressCount > 88 {
-		keyPressCount %= 88
-	}
-
-	if keyPressCount == 1 || keyPressCount == 3 || keyPressCount == 89 {
-		return "white"
-	}
-
-	if keyPressCount == 2 {
+	switch (keyPressCount - 1) % 88 % 12 {
+	case 1, 4, 6, 9, 11:
 		return "black"
 	}
-
-	period := (keyPressCount - 4) % 12
-
-	if period == 0 || period == 2 || period == 4 || period == 5 || period == 7 || period == 9 || period == 11 {
-		return "white"
-	}
-
-	return "black"
+	return "white"
 }
