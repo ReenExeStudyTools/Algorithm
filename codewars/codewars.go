@@ -3,6 +3,7 @@ package codewars
 import (
 	"math"
 	"sort"
+	"strconv"
 	"strings"
 )
 
@@ -136,5 +137,47 @@ func Potatoes(p0, w0, p1 int) int {
 }
 
 func FizzBuzzCuckooClock(time string) string {
-	// your code here
+	hours, _ := strconv.ParseInt(time[:2], 10, 64)
+	minutes, _ := strconv.ParseInt(time[3:], 10, 64)
+
+	if minutes == 0 {
+		word := "Cuckoo"
+		repeats := int(hours % 12)
+		if repeats == 1 {
+			return word
+		}
+
+		if repeats == 0 {
+			repeats = 12
+		}
+
+		return word + strings.Repeat(" Cuckoo", repeats-1)
+	}
+
+	if minutes == 30 {
+		return "Cuckoo"
+	}
+
+	complete := 0
+	if minutes%3 == 0 {
+		complete += 2
+	}
+
+	if minutes%5 == 0 {
+		complete += 1
+	}
+
+	if complete == 3 {
+		return "Fizz Buzz"
+	}
+
+	if complete == 2 {
+		return "Fizz"
+	}
+
+	if complete == 1 {
+		return "Buzz"
+	}
+
+	return "tick"
 }

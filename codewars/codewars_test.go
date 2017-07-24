@@ -152,7 +152,6 @@ func TestFizzBuzzCuckooClock(t *testing.T) {
 		{"03:03", "Fizz"},
 		{"14:30", "Cuckoo"},
 		{"08:55", "Buzz"},
-		{"08:55", "Buzz"},
 		{"00:00", "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo"},
 		{"12:00", "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo"},
 	}
