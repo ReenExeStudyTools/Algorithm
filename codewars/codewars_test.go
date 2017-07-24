@@ -164,5 +164,37 @@ func TestFizzBuzzCuckooClock(t *testing.T) {
 }
 
 func TestBlackOrWhiteKey(t *testing.T) {
-
+	if BlackOrWhiteKey(1) != "white" {
+		t.Fail()
+	}
+	if BlackOrWhiteKey(5) != "black" {
+		t.Fail()
+	}
+	if BlackOrWhiteKey(12) != "black" {
+		t.Fail()
+	}
+	if BlackOrWhiteKey(42) != "white" {
+		t.Fail()
+	}
+	if BlackOrWhiteKey(88) != "white" {
+		t.Fail()
+	}
+	if BlackOrWhiteKey(89) != "white" {
+		t.Fail()
+	}
+	if BlackOrWhiteKey(92) != "white" {
+		t.Fail()
+	}
+	if BlackOrWhiteKey(100) != "black" {
+		t.Fail()
+	}
+	if BlackOrWhiteKey(111) != "white" {
+		t.Fail()
+	}
+	if BlackOrWhiteKey(200) != "black" {
+		t.Fail()
+	}
+	if BlackOrWhiteKey(2017) != "white" {
+		t.Fail()
+	}
 }
