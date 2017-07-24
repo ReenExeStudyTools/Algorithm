@@ -158,24 +158,15 @@ func FizzBuzzCuckooClock(time string) string {
 		return "Cuckoo"
 	}
 
-	complete := 0
-	if minutes%3 == 0 {
-		complete += 2
-	}
-
-	if minutes%5 == 0 {
-		complete += 1
-	}
-
-	if complete == 3 {
+	if minutes%15 == 0 {
 		return "Fizz Buzz"
 	}
 
-	if complete == 2 {
+	if minutes%3 == 0 {
 		return "Fizz"
 	}
 
-	if complete == 1 {
+	if minutes%5 == 0 {
 		return "Buzz"
 	}
 
