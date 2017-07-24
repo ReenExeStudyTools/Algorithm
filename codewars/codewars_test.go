@@ -145,7 +145,21 @@ func TestPotatoes(t *testing.T) {
 }
 
 func TestFizzBuzzCuckooClock(t *testing.T) {
-	if FizzBuzzCuckooClock("13:34") != "tick" {
-		t.Fail()
+	tests := [][]string{
+		{"13:34", "tick"},
+		{"21:00", "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo"},
+		{"11:15", "Fizz Buzz"},
+		{"03:03", "Fizz"},
+		{"14:30", "Cuckoo"},
+		{"08:55", "Buzz"},
+		{"08:55", "Buzz"},
+		{"00:00", "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo"},
+		{"12:00", "Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo Cuckoo"},
+	}
+
+	for _, compare := range tests {
+		if FizzBuzzCuckooClock(compare[0]) != compare[1] {
+			t.Fail()
+		}
 	}
 }
