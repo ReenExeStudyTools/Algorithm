@@ -172,3 +172,7 @@ func FizzBuzzCuckooClock(time string) string {
 
 	return "tick"
 }
+
+func BlackOrWhiteKey(keyPressCount int) string {
+	return ""
+}

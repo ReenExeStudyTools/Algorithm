@@ -162,3 +162,7 @@ func TestFizzBuzzCuckooClock(t *testing.T) {
 		}
 	}
 }
+
+func TestBlackOrWhiteKey(t *testing.T) {
+
+}
