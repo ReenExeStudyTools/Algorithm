@@ -208,3 +208,17 @@ func TestOpposite(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestDuplicateCount(t *testing.T) {
+	if (DuplicateCount("abcde") != 0) {
+		t.Fail()
+	}
+
+	if (DuplicateCount("abcdeaB11") != 3) {
+		t.Fail()
+	}
+
+	if (DuplicateCount("indivisibility") != 1) {
+		t.Fail()
+	}
+}

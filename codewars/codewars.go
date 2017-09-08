@@ -184,3 +184,7 @@ func BlackOrWhiteKey(keyPressCount int) string {
 func Opposite(value int) int {
 	return -value;
 }
+
+func DuplicateCount(s string) int  {
+	return 1
+}
