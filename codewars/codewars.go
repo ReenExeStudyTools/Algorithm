@@ -186,5 +186,18 @@ func Opposite(value int) int {
 }
 
 func DuplicateCount(s string) int  {
-	return 1
+	letterCountMap := map[string]int{}
+
+	for _, letter := range s {
+		letterCountMap[strings.ToLower(string(letter))] += 1
+	}
+
+	duplicate := 0;
+	for _, count := range letterCountMap   {
+		if count > 1 {
+			duplicate++
+		}
+	}
+
+	return duplicate
 }
