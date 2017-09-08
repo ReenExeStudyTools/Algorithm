@@ -180,3 +180,7 @@ func BlackOrWhiteKey(keyPressCount int) string {
 	}
 	return "white"
 }
+
+func Opposite(value int) int {
+	return -value;
+}

@@ -198,3 +198,13 @@ func TestBlackOrWhiteKey(t *testing.T) {
 		t.Fail()
 	}
 }
+
+func TestOpposite(t *testing.T) {
+	if (Opposite(-1) != 1) {
+		t.Fail()
+	}
+
+	if (Opposite(7) != -7) {
+		t.Fail()
+	}
+}
